@@ -1,0 +1,14 @@
+task: rationale_hg_stg1_ecnc
+model_path: results/models/numhg/ecnc/mistral/stg1-sft-r128a64lr2e4ep3x-checkpoint-{}-merged #merged model from step 4b.
+adapter_path: results/models/numhg/ecnc/mistral/stg1-dpo-r256a128lr2e6b08/checkpoint-{} #replace {} with the actual checkpoint number (i.e., the last checkpoint). It is from the model you trained in step 4d.
+data_path: data/dtestECNC.json
+rationale_path: null
+output_dir: output/numhg/ecnc/mistral/rationales-stg1-dpo-r256a128lr2e6b08
+sample_num: 1
+num_check: false
+max_new_tokens: 1024
+temperature: 0.01
+batch_size: 16
+inference_num: 1
+duplicates_multiple: null
+

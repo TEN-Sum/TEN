@@ -1,0 +1,46 @@
+task: rationale_hg_stg1_ecnc
+data_path: data/data_dpo_ecnc18315highgap.hf
+model_id: results/models/numhg/ecnc/mistral/stg1-sft-r128a64lr2e4ep3x-checkpoint-{}-merged
+r: 256
+lora_alpha: 128
+lora_dropout: 0.05
+bias: none
+task_type: CAUSAL_LM
+target_modules:
+- q_proj
+- k_proj
+- v_proj
+- o_proj
+- gate_proj
+- up_proj
+- down_proj
+max_prompt_length: 1024
+max_length: 1536
+beta: 0.8
+remove_unused_columns: false
+do_eval: true
+eval_strategy: steps
+eval_steps: 100
+per_device_eval_batch_size: 1
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 32
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+learning_rate: 2.0e-06
+max_grad_norm: 0.3
+lr_scheduler_type: cosine
+max_steps: -1
+num_train_epochs: 1
+save_strategy: steps
+save_steps: 100
+save_total_limit: 2
+log_level: info
+logging_steps: 10
+output_dir: results/models/numhg/ecnc/mistral/stg1-dpo-r256a128lr2e6b08
+optim: adamw_torch_fused
+warmup_ratio: 0.1
+bf16: true
+seed: 42
+load_best_model_at_end: true
+report_to: null

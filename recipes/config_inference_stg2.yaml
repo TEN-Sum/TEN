@@ -1,0 +1,14 @@
+task: rationale_hg_stg2_ecnc
+model_path: mistralai/Mistral-7B-v0.3 #mistralai/Mistral-7B-v0.3 #meta-llama/Meta-Llama-3.1-8B
+adapter_path: results/models/numhg/ecnc/mistral/stg2-sft-r64a32lr2e4ep3x/checkpoint-{} #replace {} with the actual checkpoint number (i.e., the third and final checkpoint). It is from the model you trained in step 3 - stage 2.
+data_path: data/dtestECNC.json
+rationale_path: output/numhg/ecnc/mistral/rationales-stg1-dpo-r256a128lr2e6b08/rank-0 #if you have used multipe gpus in step 5 - stage 1 -b and concated the results in step 5 - stage 1 - c, please make sure you used the concated file rank-c, i.e., rationale_path: output/numhg/ecnc/mistral/rationales-stg1-dpo-r256a128lr2e6b08/rank-c
+output_dir: output/numhg/ecnc/mistral/stg2-sft-r64a32lr2e4ep3x-stg1-dpo-r256a128lr2e6b08
+sample_num: 1
+num_check: false
+max_new_tokens: 36
+temperature: 0.01
+batch_size: 16
+inference_num: 1
+duplicates_multiple: null
+
