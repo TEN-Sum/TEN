@@ -1,16 +1,16 @@
-##How to use
+## How to use
 
-1. Install dependencies
+### 1 Install dependencies
 
     pip install -r requirements.txt
 
-2. Dataset
+### 2 Dataset
 
 The NumHG and Xsum datasetes are saved in the data folder. They have been augmented with the teacher LLM generated rationale.
 
-3. Run SFT
+### 3 Run SFT
 
-Stage 1: SFT for rationale generator
+#### Stage 1: SFT for rationale generator
 
 Run the following code in terminal to start training
 
@@ -18,7 +18,7 @@ Run the following code in terminal to start training
     
 *note: if you have multiple gpus (e.g. 8), please change the flag --num_processes=8. Please also reduce the gradient_accumulation_steps parameter if you scale up the number of gpus.*
 
-Stage 2: SFT for headline generator
+#### Stage 2: SFT for headline generator
 
 Run the following code in terminal to start training
 
@@ -27,7 +27,7 @@ Run the following code in terminal to start training
 *note: if you have multiple gpus (e.g. 8), please change the flag --num_processes=8. Please also reduce the gradient_accumulation_steps parameter if you scale up the number of gpus.*
 
 
-4. Run DPO
+### 4 Run DPO
    
 The preference data for dpo is saved in the data folder in our submission. We've created this dataset in our experiment. The process with a chartflow is detailed in our paper.
 
@@ -52,11 +52,11 @@ d. run the following code in terminal to start the dpo process
     
 *note: if you have multiple gpus (e.g. 8), please change the flag --num_processes=8. Please also reduce the gradient_accumulation_steps parameter if you scale up the number of gpus.*
 
-5. Inference
+### 5 Inference
    
 Stage 1: generate the rationales for test data
 
-a. open and edit the file recipes/config_inference.yaml, and make the following changes:
+a. open and edit the file recipes/config_inference_stg1.yaml, and make the following changes:
     
     model_path: results/models/numhg/ecnc/mistral/stg1-sft-r128a64lr2e4ep3x-checkpoint-{}-merged #merged model from step 4b.
     
@@ -79,7 +79,7 @@ c. if you have used multiple gpus for inference, run the following command
 
 Stage 2: generate the headlines
 
-a. open and edit the file recipes/config_inference.yaml, and make the following changes:
+a. open and edit the file recipes/config_inference_stg2.yaml, and make the following changes:
 
     adapter_path: results/models/numhg/ecnc/mistral/stg2-sft-r64a32lr2e4ep3x/checkpoint-{} 
     
