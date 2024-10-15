@@ -54,7 +54,7 @@ d. run the following code in terminal to start the dpo process
 
 ### 5 Inference
    
-Stage 1: generate the rationales for test data
+#### Stage 1: generate the rationales for test data
 
 a. open and edit the file recipes/config_inference_stg1.yaml, and make the following changes:
     
@@ -77,7 +77,7 @@ c. if you have used multiple gpus for inference, run the following command
 
     python scripts/run_concat_stg1.py
 
-Stage 2: generate the headlines
+#### Stage 2: generate the headlines
 
 a. open and edit the file recipes/config_inference_stg2.yaml, and make the following changes:
 
