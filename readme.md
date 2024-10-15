@@ -101,6 +101,11 @@ c. if you have used multiple gpus for inference, run the following command
     python scripts/run_concat_stg2.py
 
 
+### Evaluation
+
+We adopt the evaluation metrics commonly used in existing studies [(Huang et al., 2024)](http://arxiv.org/abs/2309.01455) to assess both the textual quality and numerical accuracy for headline generation. The metrics include number accuracy, ROUGE scores, BERTScores, and MoverScores. We adopt the [codes](https://github.com/ChunJiChen/NumEval_Evaluation) from [Huang et al. (2024)](http://arxiv.org/abs/2309.01455) to automatically calulate these metrics. 
+
+
 
 
 
