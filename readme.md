@@ -1,14 +1,14 @@
-How to use
+##How to use
 
 1. Install dependencies
 
     pip install -r requirements.txt
 
-3. Dataset
+2. Dataset
 
 The NumHG and Xsum datasetes are saved in the data folder. They have been augmented with the teacher LLM generated rationale.
 
-5. Run SFT
+3. Run SFT
 
 Stage 1: SFT for rationale generator
 
