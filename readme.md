@@ -1,3 +1,10 @@
+# Teaching Large Language Models Number-Focused Headline Generation With Key Element Rationales
+The preprint of the paper is available at [TEN-Sum](https://arxiv.org/abs/2502.03129).
+
+## Method
+
+## Results
+
 ## How to use
 
 ### 1 Install dependencies
