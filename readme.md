@@ -2,8 +2,17 @@
 The preprint of the paper is available at [TEN-Sum](https://arxiv.org/abs/2502.03129).
 
 ## Method
+![key steps](figures/key_steps.png)
+Key steps for automatic generation of rationales to enhance numerical headline generation.
 
 ## Results
+![result 1](figures/results_1.png)
+![result 2](figures/results_2.png)
+Numerical accuracy (%) and textual quality score (%) for TEN against baselines on NumHG and Xsum.
+
+## Case Study
+![case study](figures/case_study.png)
+TEN vs. NCL (Baseline) for rationale and headline generation
 
 ## How to use
 
