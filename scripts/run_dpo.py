@@ -50,7 +50,7 @@ def main():
         use_cache=False
         )
 
-    # wandb.login(key="3815f35ed462426c8e328c8581af08e6b05dff5c")
+    # wandb.login()
     # run = wandb.init(project='mistral_rationale_hg_stg1_dpo', job_type="training", anonymous="allow", name="r512-alpha256-b03-dev12301")
 
     training_args = DPOConfig(

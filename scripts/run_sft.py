@@ -42,7 +42,7 @@ def main():
 
 
     # import wandb
-    # wandb.login(key="3815f35ed462426c8e328c8581af08e6b05dff5c")
+    # wandb.login()
     # run = wandb.init(project='mistral-rationale-stg1-sft-epoch12x', job_type="training", anonymous="allow", name="r256-alpha128")
 
     training_args = SFTConfig(
